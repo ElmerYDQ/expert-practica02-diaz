@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "26f814b7-8deb-4428-87fd-405cd1c16092",
+		"name": "expert-practica02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addFotoMongo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "hola",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/Diaz/Pictures/Imagen1.png"
+						},
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8099/api/fotos/fotos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"fotos",
+						"fotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFotoMongo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8099/api/fotos/fotos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"fotos",
+						"fotos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSocios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8099/api/socios/socios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"socios",
+						"socios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveSocio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"12345678\",\r\n    \"nombre\": \"Erick\",\r\n    \"paterno\": \"Cordova\",\r\n    \"materno\": \"Pisfil\",\r\n    \"correo\": \"erick@example.com\",\r\n    \"telefono\": \"123456789\",\r\n    \"estado\": \"activo\",\r\n    \"tipoMembresia\": \"GOLD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8099/api/socios/socio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8099",
+					"path": [
+						"api",
+						"socios",
+						"socio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
